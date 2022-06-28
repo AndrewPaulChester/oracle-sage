@@ -1,0 +1,22 @@
+LEVEL: "mylevel"
+FLAGS: premapped
+REGION: (0,0,20,80), lit, "ordinary"
+
+ROOM: "ordinary" , lit, random, random, random {
+  STAIR: random, up
+  OBJECT:('%', "food ration"), random
+}
+
+ROOM: "ordinary" , lit, random, random, random {
+  STAIR: random, down
+}
+ROOM: "ordinary" , lit, random, random, random {
+  STAIR: random, down
+}
+ROOM: "ordinary" , lit, random, random, random {
+  STAIR: random, down
+}
+ROOM: "ordinary" , lit, random, random, random {
+}
+
+RANDOM_CORRIDORS

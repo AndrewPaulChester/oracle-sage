@@ -1,0 +1,31 @@
+name: sage
+channels:
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.8
+  - pytorch==1.7.1
+  - torchvision==0.8.2
+  - cudatoolkit=11.0
+  - cython
+  - lockfile
+  - numba=0.52.0
+  - networkx==2.6.3
+  - pandas
+  - tqdm
+  - pip:
+    - python-dateutil==2.8.1
+    - future==0.18.2
+    - gym==0.18.0
+    - opencv-python==4.5.5.62
+    - pyyaml
+    - pathfinding==1.0.1
+    - plotly
+    - matplotlib==3.3.4
+    - torch-cluster==1.5.9
+    - torch-scatter==2.0.7
+    - torch-sparse==0.6.9
+    - torch-spline-conv==1.2.1
+    - torch-geometric==1.7.2
+
+

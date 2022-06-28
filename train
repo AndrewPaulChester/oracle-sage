@@ -1,0 +1,30 @@
+######################## TOY ###########################
+SR-DRL:
+python sage/experiments/gnn_global.py --env-name [Tradeoff-3-10-v0,Tradeoff-10-30-v0] --entropy-coef 5e-5 --learning-rate 3e-3 --num-processes 128 --num-env-steps 2000000 --num-env-steps [3,7,11,15] --seed [0,300,600,900,1200]
+
+Oracle-SAGE:
+python sage/experiments/gnn_global.py --env-name [Tradeoff-3-10-v0,Tradeoff-10-30-v0] --entropy-coef 5e-5 --learning-rate 3e-3 --num-processes 256 --num-env-steps 2000000 --num-env-steps [3,7,11,15] --feedback  --shared-gnn --seed [0,300,600,900,1200]
+
+
+######################## TAXI ###########################
+SR-DRL:
+python sage/experiments/gnn_global.py --env-name city-taxi-v1 --entropy-coef 5e-5 --learning-rate 3e-4 --num-processes 256 --num-env-steps 5000000 --num-env-steps [5,30] --seed [0,300,600,900,1200]
+
+SAGE:
+python sage/experiments/gnn_global.py --env-name city-taxi-unmasked-v1 --entropy-coef 5e-5 --learning-rate 3e-4 --num-processes 32 --num-env-steps 200000 --num-env-steps [5,30] --planner  --feedback  --num-planning-choices 1 --path-loss-coef  0 --shared-gnn  --seed [0,300,600,900,1200]
+
+Oracle-SAGE:
+python sage/experiments/gnn_global.py --env-name city-taxi-unmasked-v1 --entropy-coef 5e-5 --learning-rate 3e-4 --num-processes 32 --num-env-steps 200000 --num-env-steps [5,30] --planner  --feedback  --shared-gnn  --seed [0,300,600,900,1200]
+
+
+######################## NLE ###########################
+SR-DRL
+python sage/experiments/gnn_global.py --env-name hungry-danger5-v0 --entropy-coef 5e-5 --learning-rate 6e-4 --num-processes 64 --num-env-steps 10000000 --num-env-steps 3 --shared-gnn  --lr-decay --seed [0,300,600,900,1200]
+
+SAGE
+python sage/experiments/gnn_global.py --env-name hungry-danger5-unmasked-v0 --entropy-coef 5e-5 --learning-rate 6e-4 --num-processes 64 --num-env-steps 400000 --num-env-steps 3 --feedback  --path-loss-coef 0 --num-planning-choices 1 --planner  --shared-gnn  --lr-decay --seed [0,300,600,900,1200]
+
+Oracle-SAGE:
+python sage/experiments/gnn_global.py --env-name hungry-danger5-unmasked-v0 --entropy-coef 5e-5 --learning-rate 6e-4 --num-processes 64 --num-env-steps 400000 --num-env-steps 3 --feedback  --planner  --shared-gnn --lr-decay --seed [0,300,600,900,1200] 
+
+
